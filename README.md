@@ -50,18 +50,13 @@ Figure -02 HALF Subtractor
 
 **Program:**
 ```
-Developed by:Pavithra P
-RegisterNumber:212223110035
-
-module HalfAddSub(a,b,sum,carry,D,Bo);
+module ex03(a,b,cy,sm,df,bo);
 input a,b;
-output sum,carry,D,Bo;
-wire abar;
-xor G1(sum,a,b);
-and G2(carry,a,b);
-not (abar,a);
-xor G3(D,a,b);
-and G4(Bo,abar,b);
+output sm,cy,df,bo;
+xor(sm,a,b);
+and(cy,a,b);
+xor(df,a,b);
+and(bo,~a,b);
 endmodule
 ```
 /* Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
@@ -70,11 +65,10 @@ Developed by:**BAKKIYALAKSHMI E**
 RegisterNumber:**212223220012**
 
 **RTL Schematic**
-![Screenshot 2024-04-05 102225](https://github.com/Bakkiyalakshmiethiraj/HALF_ADDER_SUBTRACTOR/assets/144870983/a8e4c9e9-ca5f-45bd-9b2c-0bf73c07bb0c)
-![Screenshot 2024-04-05 102320](https://github.com/Bakkiyalakshmiethiraj/HALF_ADDER_SUBTRACTOR/assets/144870983/731e92f0-f87e-4c8e-a0e0-64a36c7d972b)
+![Screenshot 2024-04-05 102810](https://github.com/Bakkiyalakshmiethiraj/HALF_ADDER_SUBTRACTOR/assets/144870983/6b3c3194-be6b-4f5d-902f-19673a7c977f)
 
 **Output/TIMING Waveform**
-![Screenshot 2024-04-05 102356](https://github.com/Bakkiyalakshmiethiraj/HALF_ADDER_SUBTRACTOR/assets/144870983/fdca073c-d2eb-46cc-b67d-c6e24f132157)
+![Screenshot 2024-04-05 102833](https://github.com/Bakkiyalakshmiethiraj/HALF_ADDER_SUBTRACTOR/assets/144870983/c163f41f-f070-4af6-8b28-d0bbdc9b700f)
 
 **Result:**
 Thus,a half adder and half subtractor circuit has been designed and its truth table has been verified in Quartus using Verilog programming.
